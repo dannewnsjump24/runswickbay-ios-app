@@ -9,24 +9,38 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack(alignment: .center) {
-            
-            RunswickBayMapView()
-                //.frame(height: 400).offset(y:-112)
-//            RunswickBayImage()
-//                .clipShape(Circle())
-//                .overlay {
-//                    Circle().stroke(.white, lineWidth: 4)
-//                }.offset(y:-80)
-//            .shadow(radius: 7)
-//            Text("Holiday App").font(.title).offset(y:-40)
+        TabView {
+            MapView()
+                .tabItem {
+                    Label("Map", systemImage: "map")
+                }
+           ListView()
+                .tabItem {
+                    Label("List", systemImage: "table")
+                }
         }
+        .onAppear() {
+            UITabBar.appearance().backgroundColor = .white
+        }
+    }
         
+}
+
+struct MapView: View {
+    var body: some View {
+        RunswickBayMapView()
     }
 }
 
+struct ListView: View {
+    var body: some View {
+        RunswickBayListView()
+    }
+}
+ 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .navigationTitle("List")
     }
 }
