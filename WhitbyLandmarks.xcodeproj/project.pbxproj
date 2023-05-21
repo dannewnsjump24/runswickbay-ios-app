@@ -14,6 +14,10 @@
 		0E7005072A177E660056B3F7 /* WhitbyLandmarksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7005062A177E660056B3F7 /* WhitbyLandmarksTests.swift */; };
 		0E7005112A177E660056B3F7 /* WhitbyLandmarksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7005102A177E660056B3F7 /* WhitbyLandmarksUITests.swift */; };
 		0E7005132A177E660056B3F7 /* WhitbyLandmarksUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7005122A177E660056B3F7 /* WhitbyLandmarksUITestsLaunchTests.swift */; };
+		0E7005202A17829B0056B3F7 /* RunswickBayImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E70051F2A17829B0056B3F7 /* RunswickBayImage.swift */; };
+		0E7005222A1783B20056B3F7 /* RunswickBayMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7005212A1783B20056B3F7 /* RunswickBayMapView.swift */; };
+		0E7005242A1803520056B3F7 /* PlaceAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7005232A1803520056B3F7 /* PlaceAnnotationView.swift */; };
+		0E7005262A1808CC0056B3F7 /* DetailedLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7005252A1808CC0056B3F7 /* DetailedLocationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,10 @@
 		0E70050C2A177E660056B3F7 /* WhitbyLandmarksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhitbyLandmarksUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E7005102A177E660056B3F7 /* WhitbyLandmarksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhitbyLandmarksUITests.swift; sourceTree = "<group>"; };
 		0E7005122A177E660056B3F7 /* WhitbyLandmarksUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhitbyLandmarksUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0E70051F2A17829B0056B3F7 /* RunswickBayImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunswickBayImage.swift; sourceTree = "<group>"; };
+		0E7005212A1783B20056B3F7 /* RunswickBayMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunswickBayMapView.swift; sourceTree = "<group>"; };
+		0E7005232A1803520056B3F7 /* PlaceAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceAnnotationView.swift; sourceTree = "<group>"; };
+		0E7005252A1808CC0056B3F7 /* DetailedLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedLocationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +104,10 @@
 			children = (
 				0E7004F52A177E650056B3F7 /* WhitbyLandmarksApp.swift */,
 				0E7004F72A177E650056B3F7 /* ContentView.swift */,
+				0E70051F2A17829B0056B3F7 /* RunswickBayImage.swift */,
+				0E7005212A1783B20056B3F7 /* RunswickBayMapView.swift */,
+				0E7005252A1808CC0056B3F7 /* DetailedLocationView.swift */,
+				0E7005232A1803520056B3F7 /* PlaceAnnotationView.swift */,
 				0E7004F92A177E660056B3F7 /* Assets.xcassets */,
 				0E7004FB2A177E660056B3F7 /* Preview Content */,
 			);
@@ -259,6 +271,10 @@
 			files = (
 				0E7004F82A177E650056B3F7 /* ContentView.swift in Sources */,
 				0E7004F62A177E650056B3F7 /* WhitbyLandmarksApp.swift in Sources */,
+				0E7005222A1783B20056B3F7 /* RunswickBayMapView.swift in Sources */,
+				0E7005262A1808CC0056B3F7 /* DetailedLocationView.swift in Sources */,
+				0E7005242A1803520056B3F7 /* PlaceAnnotationView.swift in Sources */,
+				0E7005202A17829B0056B3F7 /* RunswickBayImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

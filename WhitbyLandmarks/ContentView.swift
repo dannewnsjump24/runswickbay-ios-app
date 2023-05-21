@@ -9,13 +9,19 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        VStack(alignment: .center) {
+            
+            RunswickBayMapView()
+                //.frame(height: 400).offset(y:-112)
+//            RunswickBayImage()
+//                .clipShape(Circle())
+//                .overlay {
+//                    Circle().stroke(.white, lineWidth: 4)
+//                }.offset(y:-80)
+//            .shadow(radius: 7)
+//            Text("Holiday App").font(.title).offset(y:-40)
         }
-        .padding()
+        
     }
 }
 
