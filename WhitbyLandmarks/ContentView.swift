@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ContentView: View {
     @State var locations = [Location]()
-
     
     var body: some View {
         TabView {
@@ -22,11 +21,8 @@ struct ContentView: View {
                     Label("List", systemImage: "table")
                 }
         }
-        
         .onAppear() {
-            print("herer");
             Api().loadData { (locations) in
-                print(locations)
                 self.locations = locations
             }
 

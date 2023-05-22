@@ -45,7 +45,6 @@ class Api : ObservableObject{
                 decoder.dateDecodingStrategy = .formatted(DateFormatter.fullISO8601)
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
                    if let decodedResponse = try? decoder.decode(Response.self, from: data) {
-                       print(decodedResponse)
                        DispatchQueue.main.async {
                            self.locations = decodedResponse.data
                        }

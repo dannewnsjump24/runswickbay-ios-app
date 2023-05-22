@@ -109,6 +109,7 @@
 		0E7004F42A177E650056B3F7 /* WhitbyLandmarks */ = {
 			isa = PBXGroup;
 			children = (
+				0E79B27D2A1C0FA8005B94F2 /* Models */,
 				0E79B27A2A1BD971005B94F2 /* Info.plist */,
 				0E7004F52A177E650056B3F7 /* WhitbyLandmarksApp.swift */,
 				0E7004F72A177E650056B3F7 /* ContentView.swift */,
@@ -119,7 +120,6 @@
 				0E7004F92A177E660056B3F7 /* Assets.xcassets */,
 				0E7004FB2A177E660056B3F7 /* Preview Content */,
 				0E7005272A1A66E90056B3F7 /* RunswickBayListView.swift */,
-				0E7005292A1A9F950056B3F7 /* Location.swift */,
 			);
 			path = WhitbyLandmarks;
 			sourceTree = "<group>";
@@ -148,6 +148,14 @@
 				0E7005122A177E660056B3F7 /* WhitbyLandmarksUITestsLaunchTests.swift */,
 			);
 			path = WhitbyLandmarksUITests;
+			sourceTree = "<group>";
+		};
+		0E79B27D2A1C0FA8005B94F2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0E7005292A1A9F950056B3F7 /* Location.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
