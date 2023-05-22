@@ -19,6 +19,7 @@
 		0E7005242A1803520056B3F7 /* PlaceAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7005232A1803520056B3F7 /* PlaceAnnotationView.swift */; };
 		0E7005262A1808CC0056B3F7 /* DetailedLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7005252A1808CC0056B3F7 /* DetailedLocationView.swift */; };
 		0E7005282A1A66E90056B3F7 /* RunswickBayListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7005272A1A66E90056B3F7 /* RunswickBayListView.swift */; };
+		0E70052A2A1A9F960056B3F7 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7005292A1A9F950056B3F7 /* Location.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		0E7005232A1803520056B3F7 /* PlaceAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceAnnotationView.swift; sourceTree = "<group>"; };
 		0E7005252A1808CC0056B3F7 /* DetailedLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedLocationView.swift; sourceTree = "<group>"; };
 		0E7005272A1A66E90056B3F7 /* RunswickBayListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunswickBayListView.swift; sourceTree = "<group>"; };
+		0E7005292A1A9F950056B3F7 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				0E7004F92A177E660056B3F7 /* Assets.xcassets */,
 				0E7004FB2A177E660056B3F7 /* Preview Content */,
 				0E7005272A1A66E90056B3F7 /* RunswickBayListView.swift */,
+				0E7005292A1A9F950056B3F7 /* Location.swift */,
 			);
 			path = WhitbyLandmarks;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 			files = (
 				0E7004F82A177E650056B3F7 /* ContentView.swift in Sources */,
 				0E7004F62A177E650056B3F7 /* WhitbyLandmarksApp.swift in Sources */,
+				0E70052A2A1A9F960056B3F7 /* Location.swift in Sources */,
 				0E7005222A1783B20056B3F7 /* RunswickBayMapView.swift in Sources */,
 				0E7005282A1A66E90056B3F7 /* RunswickBayListView.swift in Sources */,
 				0E7005262A1808CC0056B3F7 /* DetailedLocationView.swift in Sources */,

@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var locations = [Location]()
+
+    
     var body: some View {
         TabView {
             MapView()
@@ -20,6 +23,11 @@ struct ContentView: View {
                 }
         }
         .onAppear() {
+            Api().loadData { (locations) in
+                print(locations)
+                self.locations = locations
+            }
+
             UITabBar.appearance().backgroundColor = .white
         }
     }
