@@ -21,6 +21,7 @@
 		0E7005282A1A66E90056B3F7 /* RunswickBayListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7005272A1A66E90056B3F7 /* RunswickBayListView.swift */; };
 		0E70052A2A1A9F960056B3F7 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7005292A1A9F950056B3F7 /* Location.swift */; };
 		0E79B27C2A1BF3F9005B94F2 /* locations.json in Resources */ = {isa = PBXBuildFile; fileRef = 0E79B27B2A1BF3F9005B94F2 /* locations.json */; };
+		0EEDEC7B2A27CC04008EB763 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEDEC7A2A27CC04008EB763 /* ApiError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		0E7005292A1A9F950056B3F7 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		0E79B27A2A1BD971005B94F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		0E79B27B2A1BF3F9005B94F2 /* locations.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = locations.json; sourceTree = "<group>"; };
+		0EEDEC7A2A27CC04008EB763 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 		0E7004F42A177E650056B3F7 /* WhitbyLandmarks */ = {
 			isa = PBXGroup;
 			children = (
+				0EEDEC792A27CBD0008EB763 /* Enums */,
 				0E79B27D2A1C0FA8005B94F2 /* Models */,
 				0E79B27A2A1BD971005B94F2 /* Info.plist */,
 				0E7004F52A177E650056B3F7 /* WhitbyLandmarksApp.swift */,
@@ -156,6 +159,14 @@
 				0E7005292A1A9F950056B3F7 /* Location.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		0EEDEC792A27CBD0008EB763 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				0EEDEC7A2A27CC04008EB763 /* ApiError.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,6 +305,7 @@
 				0E70052A2A1A9F960056B3F7 /* Location.swift in Sources */,
 				0E7005222A1783B20056B3F7 /* RunswickBayMapView.swift in Sources */,
 				0E7005282A1A66E90056B3F7 /* RunswickBayListView.swift in Sources */,
+				0EEDEC7B2A27CC04008EB763 /* ApiError.swift in Sources */,
 				0E7005262A1808CC0056B3F7 /* DetailedLocationView.swift in Sources */,
 				0E7005242A1803520056B3F7 /* PlaceAnnotationView.swift in Sources */,
 				0E7005202A17829B0056B3F7 /* RunswickBayImage.swift in Sources */,

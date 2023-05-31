@@ -9,25 +9,22 @@ import SwiftUI
 import MapKit
 
 struct RunswickBayListView: View {
-    let places = [
-        Place(name: "Runswick Bay", coordinate: CLLocationCoordinate2D(latitude:54.5322, longitude: -0.7368)),
-        Place(name: "RedCar Beach", coordinate: CLLocationCoordinate2D(latitude: 54.6199, longitude: -1.0661)),
-        Place(name: "Whitby", coordinate: CLLocationCoordinate2D(latitude: 54.4863, longitude: -0.6133)),
-        Place(name: "Saltburn", coordinate: CLLocationCoordinate2D(latitude: 54.5816, longitude: -0.9751)),
-        Place(name: "Robin Hood's Bay", coordinate: CLLocationCoordinate2D(latitude: 54.4344, longitude: -0.5350))
-    ]
+    @EnvironmentObject var locationApi: Api
     
     var body: some View {
         NavigationView {
-            List(places) {
-                place in
-                NavigationLink {
-                    DetailedLocationView(place: place).navigationTitle(place.name)
-                } label: {
-                    PlaceRow(place: place)
-                }
-               
-            }
+            List(locationApi.locations, id: \.id) { item in
+                           Text(item.name)
+                       }
+//            List(locationApi.locations, id: \.id) {
+//                location in
+//                NavigationLink {
+//                    DetailedLocationView(place: location).navigationTitle(location.name)
+//                } label: {
+//                    PlaceRow(place: location)
+//                }
+//
+//            }
         }
     }
 }
@@ -35,6 +32,7 @@ struct RunswickBayListView: View {
 struct RunswickBayListView_Previews: PreviewProvider {
     static var previews: some View {
         RunswickBayListView()
+            .environmentObject(Api())
     }
 }
 

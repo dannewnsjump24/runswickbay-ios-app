@@ -15,6 +15,7 @@ struct Place: Identifiable {
 }
 
 struct RunswickBayMapView: View {
+
     @State private var region = MKCoordinateRegion(
         center: CLLocationCoordinate2D(latitude:54.5322, longitude: -0.7368), span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5)
     )
@@ -26,7 +27,8 @@ struct RunswickBayMapView: View {
         Place(name: "Saltburn", coordinate: CLLocationCoordinate2D(latitude: 54.5816, longitude: -0.9751)),
         Place(name: "Robin Hood's Bay", coordinate: CLLocationCoordinate2D(latitude: 54.4344, longitude: -0.5350))
     ]
-    
+
+
     var body: some View {
         NavigationView {
             Map(coordinateRegion: $region, annotationItems: annotations) {

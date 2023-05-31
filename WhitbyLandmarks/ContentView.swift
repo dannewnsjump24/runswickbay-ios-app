@@ -8,28 +8,31 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var locations = [Location]()
-    
+    @EnvironmentObject var locationApi: Api
     var body: some View {
         TabView {
             MapView()
                 .tabItem {
                     Label("Map", systemImage: "map")
                 }
-           ListView()
+            ListView()
                 .tabItem {
                     Label("List", systemImage: "table")
                 }
-        }
-        .onAppear() {
-            Api().loadData { (locations) in
-                self.locations = locations
+        }.task {
+            do {
+                try await locationApi.loadData()
+            } catch ApiError.invalidData {
+                print("Invalid Data")
+            } catch ApiError.invalidUrl {
+                print("Invalid URL")
+            } catch ApiError.invalidResponse {
+                print("Invalid Response")
+            } catch {
+                print("Error")
             }
-
-            UITabBar.appearance().backgroundColor = .white
         }
     }
-        
 }
 
 struct MapView: View {
@@ -48,5 +51,6 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
             .navigationTitle("List")
+            .environmentObject(Api())
     }
 }

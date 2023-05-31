@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct WhitbyLandmarksApp: App {
+    var locationApi = Api();
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(locationApi)
         }
     }
 }

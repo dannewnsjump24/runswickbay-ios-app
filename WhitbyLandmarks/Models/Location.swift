@@ -16,9 +16,10 @@ struct Location: Codable, Identifiable {
     var updatedAt: Date
 }
 
-struct Response: Decodable {
-    var data : [Location]
+struct APIResponse: Decodable {
+    var data: [Location]
 }
+
 
 extension DateFormatter {
     static let fullISO8601: DateFormatter = {
@@ -32,31 +33,35 @@ extension DateFormatter {
 }
 
 class Api : ObservableObject{
-    @Published var locations = [Location]()
+    @Published var locations: [Location] = []
     
-    func loadData(completion:@escaping ([Location]) -> ()) {
-        guard let url = URL(string: "https://holiday-api.jump24.dev/api/locations") else {
-            print("Invalid url...")
-            return
+    func loadData() async throws {
+        let endpoint = "https://holiday-api.jump24.dev/api/locations"
+        
+        guard let url = URL(string: endpoint) else {
+            throw ApiError.invalidUrl
         }
-        URLSession.shared.dataTask(with: url) { data, response, error in
-            if let data = data {
-                let decoder =  JSONDecoder()
-                decoder.dateDecodingStrategy = .formatted(DateFormatter.fullISO8601)
-                decoder.keyDecodingStrategy = .convertFromSnakeCase
-                   if let decodedResponse = try? decoder.decode(Response.self, from: data) {
-                       DispatchQueue.main.async {
-                           self.locations = decodedResponse.data
-                       }
-                       return
-                   }
-               }
-               print("Fetch failed:")
+        
+        let (data, response) = try await URLSession.shared.data(from: url)
+        
+        guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
+            throw ApiError.invalidResponse
+        }
+    
+        do {
+            let decoder =  JSONDecoder()
+            decoder.dateDecodingStrategy = .formatted(DateFormatter.fullISO8601)
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
             
-            if let error = error as NSError? {
-                print("task transport error ", error.domain, error.code, error)
-                return
+            let dataResponse = try JSONDecoder().decode(APIResponse.self, from: data)
+        
+            print(dataResponse)
+            DispatchQueue.main.async {
+                self.locations = dataResponse.data
             }
-        }.resume()
+    
+        } catch {
+            throw ApiError.invalidData
+        }
     }
 }
