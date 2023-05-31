@@ -8,16 +8,16 @@
 import Foundation
 
 struct Location: Codable, Identifiable {
-    let id: UUID
+    let id: String
     var name: String
     var latitude: Double
     var longitude: Double
-    var createdAt: Date
-    var updatedAt: Date
+//    var createdAt: Date
+//    var updatedAt: Date
 }
 
 struct APIResponse: Decodable {
-    var data: [Location]
+    let data: [Location]
 }
 
 
@@ -49,7 +49,7 @@ class Api : ObservableObject{
         }
     
         do {
-            let decoder =  JSONDecoder()
+            let decoder = JSONDecoder()
             decoder.dateDecodingStrategy = .formatted(DateFormatter.fullISO8601)
             decoder.keyDecodingStrategy = .convertFromSnakeCase
             

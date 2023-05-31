@@ -9,7 +9,7 @@ import SwiftUI
 import MapKit
 
 struct DetailedLocationView: View {
-    let place: Place
+    let place: Location
     let images = ["runswick-bay", "runswick-bay"]
     var body: some View {
         VStack {

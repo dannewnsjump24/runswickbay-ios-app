@@ -12,19 +12,15 @@ struct RunswickBayListView: View {
     @EnvironmentObject var locationApi: Api
     
     var body: some View {
-        NavigationView {
-            List(locationApi.locations, id: \.id) { item in
-                           Text(item.name)
-                       }
-//            List(locationApi.locations, id: \.id) {
-//                location in
-//                NavigationLink {
-//                    DetailedLocationView(place: location).navigationTitle(location.name)
-//                } label: {
-//                    PlaceRow(place: location)
-//                }
-//
-//            }
+        NavigationView {                  }
+            List(locationApi.locations, id: \.id) { location in
+                NavigationLink {
+                    DetailedLocationView(place: location).navigationTitle(location.name)
+                } label: {
+                    PlaceRow(place: location)
+                }
+
+            }
         }
     }
 }
@@ -37,7 +33,7 @@ struct RunswickBayListView_Previews: PreviewProvider {
 }
 
 struct PlaceRow: View {
-    var place: Place
+    var place: Location
 
     var body: some View {
         Text("\(place.name)")
