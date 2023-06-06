@@ -40,9 +40,11 @@ struct DetailedLocationView: View {
 
 struct DetailedLocationView_Previews: PreviewProvider {
     static var previews: some View {
-        let previewPlace = Place(
+        let previewPlace = Location(
+            id: "1000",
             name: "Tester",
-            coordinate: CLLocationCoordinate2D(latitude: 54.6199, longitude: -1.0661)
+            latitude: 54.6199,
+            longitude: -1.0661
         );
         
         DetailedLocationView(place: previewPlace)

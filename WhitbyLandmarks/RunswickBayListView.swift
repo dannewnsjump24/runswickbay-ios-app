@@ -12,7 +12,7 @@ struct RunswickBayListView: View {
     @EnvironmentObject var locationApi: Api
     
     var body: some View {
-        NavigationView {                  }
+        NavigationView {
             List(locationApi.locations, id: \.id) { location in
                 NavigationLink {
                     DetailedLocationView(place: location).navigationTitle(location.name)

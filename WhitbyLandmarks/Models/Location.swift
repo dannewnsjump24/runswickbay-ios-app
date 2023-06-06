@@ -6,20 +6,21 @@
 //
 
 import Foundation
+import CoreLocation
 
 struct Location: Codable, Identifiable {
     let id: String
     var name: String
     var latitude: Double
     var longitude: Double
-//    var createdAt: Date
-//    var updatedAt: Date
+    var coordinate: CLLocationCoordinate2D {
+        CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+    }
 }
 
 struct APIResponse: Decodable {
     let data: [Location]
 }
-
 
 extension DateFormatter {
     static let fullISO8601: DateFormatter = {

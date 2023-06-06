@@ -9,27 +9,32 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var locationApi: Api
+    @State private var isLoggedIn = false
     var body: some View {
-        TabView {
-            MapView()
-                .tabItem {
-                    Label("Map", systemImage: "map")
+        if !self.isLoggedIn {
+            AuthenticationView()
+        } else {
+            TabView {
+                MapView()
+                    .tabItem {
+                        Label("Map", systemImage: "map")
+                    }
+                ListView()
+                    .tabItem {
+                        Label("List", systemImage: "table")
+                    }
+            }.task {
+                do {
+                    try await locationApi.loadData()
+                } catch ApiError.invalidData {
+                    print("Invalid Data")
+                } catch ApiError.invalidUrl {
+                    print("Invalid URL")
+                } catch ApiError.invalidResponse {
+                    print("Invalid Response")
+                } catch {
+                    print("Error")
                 }
-            ListView()
-                .tabItem {
-                    Label("List", systemImage: "table")
-                }
-        }.task {
-            do {
-                try await locationApi.loadData()
-            } catch ApiError.invalidData {
-                print("Invalid Data")
-            } catch ApiError.invalidUrl {
-                print("Invalid URL")
-            } catch ApiError.invalidResponse {
-                print("Invalid Response")
-            } catch {
-                print("Error")
             }
         }
     }
