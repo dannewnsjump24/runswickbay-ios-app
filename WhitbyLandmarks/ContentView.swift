@@ -9,10 +9,10 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var locationApi: Api
-    @State private var isLoggedIn = true
+    @State private var isLoggedIn = false
     var body: some View {
         if !self.isLoggedIn {
-            AuthenticationView()
+            LoginView()
         } else {
             TabView {
                 MapView()

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E15A3B32A3987C90059A282 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E15A3B22A3987C90059A282 /* LoginView.swift */; };
+		0E15A3B52A3987D00059A282 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E15A3B42A3987D00059A282 /* RegisterView.swift */; };
+		0E15A3B72A3987DC0059A282 /* ForgottenPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E15A3B62A3987DC0059A282 /* ForgottenPassword.swift */; };
 		0E7004F62A177E650056B3F7 /* WhitbyLandmarksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7004F52A177E650056B3F7 /* WhitbyLandmarksApp.swift */; };
 		0E7004F82A177E650056B3F7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7004F72A177E650056B3F7 /* ContentView.swift */; };
 		0E7004FA2A177E660056B3F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E7004F92A177E660056B3F7 /* Assets.xcassets */; };
@@ -21,7 +24,6 @@
 		0E7005282A1A66E90056B3F7 /* RunswickBayListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7005272A1A66E90056B3F7 /* RunswickBayListView.swift */; };
 		0E70052A2A1A9F960056B3F7 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7005292A1A9F950056B3F7 /* Location.swift */; };
 		0E79B27C2A1BF3F9005B94F2 /* locations.json in Resources */ = {isa = PBXBuildFile; fileRef = 0E79B27B2A1BF3F9005B94F2 /* locations.json */; };
-		0E89CBDE2A2FD13200B02F61 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E89CBDD2A2FD13200B02F61 /* AuthenticationView.swift */; };
 		0EEDEC7B2A27CC04008EB763 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEDEC7A2A27CC04008EB763 /* ApiError.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +45,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E15A3B22A3987C90059A282 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		0E15A3B42A3987D00059A282 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		0E15A3B62A3987DC0059A282 /* ForgottenPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgottenPassword.swift; sourceTree = "<group>"; };
 		0E7004F22A177E650056B3F7 /* WhitbyLandmarks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhitbyLandmarks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E7004F52A177E650056B3F7 /* WhitbyLandmarksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhitbyLandmarksApp.swift; sourceTree = "<group>"; };
 		0E7004F72A177E650056B3F7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -61,7 +66,6 @@
 		0E7005292A1A9F950056B3F7 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		0E79B27A2A1BD971005B94F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		0E79B27B2A1BF3F9005B94F2 /* locations.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = locations.json; sourceTree = "<group>"; };
-		0E89CBDD2A2FD13200B02F61 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		0EEDEC7A2A27CC04008EB763 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,6 +94,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E15A3B02A3984160059A282 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				0E15A3B12A3984210059A282 /* Views */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		0E15A3B12A3984210059A282 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0E15A3B22A3987C90059A282 /* LoginView.swift */,
+				0E15A3B42A3987D00059A282 /* RegisterView.swift */,
+				0E15A3B62A3987DC0059A282 /* ForgottenPassword.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		0E7004E92A177E650056B3F7 = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +135,7 @@
 		0E7004F42A177E650056B3F7 /* WhitbyLandmarks */ = {
 			isa = PBXGroup;
 			children = (
+				0E15A3B02A3984160059A282 /* Authentication */,
 				0EEDEC792A27CBD0008EB763 /* Enums */,
 				0E79B27D2A1C0FA8005B94F2 /* Models */,
 				0E79B27A2A1BD971005B94F2 /* Info.plist */,
@@ -125,7 +148,6 @@
 				0E7004F92A177E660056B3F7 /* Assets.xcassets */,
 				0E7004FB2A177E660056B3F7 /* Preview Content */,
 				0E7005272A1A66E90056B3F7 /* RunswickBayListView.swift */,
-				0E89CBDD2A2FD13200B02F61 /* AuthenticationView.swift */,
 			);
 			path = WhitbyLandmarks;
 			sourceTree = "<group>";
@@ -307,10 +329,12 @@
 				0E7004F62A177E650056B3F7 /* WhitbyLandmarksApp.swift in Sources */,
 				0E70052A2A1A9F960056B3F7 /* Location.swift in Sources */,
 				0E7005222A1783B20056B3F7 /* RunswickBayMapView.swift in Sources */,
-				0E89CBDE2A2FD13200B02F61 /* AuthenticationView.swift in Sources */,
 				0E7005282A1A66E90056B3F7 /* RunswickBayListView.swift in Sources */,
+				0E15A3B72A3987DC0059A282 /* ForgottenPassword.swift in Sources */,
 				0EEDEC7B2A27CC04008EB763 /* ApiError.swift in Sources */,
 				0E7005262A1808CC0056B3F7 /* DetailedLocationView.swift in Sources */,
+				0E15A3B32A3987C90059A282 /* LoginView.swift in Sources */,
+				0E15A3B52A3987D00059A282 /* RegisterView.swift in Sources */,
 				0E7005242A1803520056B3F7 /* PlaceAnnotationView.swift in Sources */,
 				0E7005202A17829B0056B3F7 /* RunswickBayImage.swift in Sources */,
 			);
