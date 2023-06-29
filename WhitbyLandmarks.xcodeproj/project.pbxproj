@@ -24,6 +24,8 @@
 		0E7005282A1A66E90056B3F7 /* RunswickBayListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7005272A1A66E90056B3F7 /* RunswickBayListView.swift */; };
 		0E70052A2A1A9F960056B3F7 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7005292A1A9F950056B3F7 /* Location.swift */; };
 		0E79B27C2A1BF3F9005B94F2 /* locations.json in Resources */ = {isa = PBXBuildFile; fileRef = 0E79B27B2A1BF3F9005B94F2 /* locations.json */; };
+		0EC78C452A4D452200FA5C5B /* Branding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC78C442A4D452200FA5C5B /* Branding.swift */; };
+		0EC78C472A4D463A00FA5C5B /* LoginForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC78C462A4D463A00FA5C5B /* LoginForm.swift */; };
 		0EEDEC7B2A27CC04008EB763 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEDEC7A2A27CC04008EB763 /* ApiError.swift */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +68,8 @@
 		0E7005292A1A9F950056B3F7 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		0E79B27A2A1BD971005B94F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		0E79B27B2A1BF3F9005B94F2 /* locations.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = locations.json; sourceTree = "<group>"; };
+		0EC78C442A4D452200FA5C5B /* Branding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Branding.swift; sourceTree = "<group>"; };
+		0EC78C462A4D463A00FA5C5B /* LoginForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginForm.swift; sourceTree = "<group>"; };
 		0EEDEC7A2A27CC04008EB763 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,6 +112,7 @@
 				0E15A3B22A3987C90059A282 /* LoginView.swift */,
 				0E15A3B42A3987D00059A282 /* RegisterView.swift */,
 				0E15A3B62A3987DC0059A282 /* ForgottenPassword.swift */,
+				0EC78C462A4D463A00FA5C5B /* LoginForm.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -135,6 +140,7 @@
 		0E7004F42A177E650056B3F7 /* WhitbyLandmarks */ = {
 			isa = PBXGroup;
 			children = (
+				0EC78C432A4D451800FA5C5B /* Shared */,
 				0E15A3B02A3984160059A282 /* Authentication */,
 				0EEDEC792A27CBD0008EB763 /* Enums */,
 				0E79B27D2A1C0FA8005B94F2 /* Models */,
@@ -184,6 +190,14 @@
 				0E7005292A1A9F950056B3F7 /* Location.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		0EC78C432A4D451800FA5C5B /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				0EC78C442A4D452200FA5C5B /* Branding.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 		0EEDEC792A27CBD0008EB763 /* Enums */ = {
@@ -336,7 +350,9 @@
 				0E15A3B32A3987C90059A282 /* LoginView.swift in Sources */,
 				0E15A3B52A3987D00059A282 /* RegisterView.swift in Sources */,
 				0E7005242A1803520056B3F7 /* PlaceAnnotationView.swift in Sources */,
+				0EC78C472A4D463A00FA5C5B /* LoginForm.swift in Sources */,
 				0E7005202A17829B0056B3F7 /* RunswickBayImage.swift in Sources */,
+				0EC78C452A4D452200FA5C5B /* Branding.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
